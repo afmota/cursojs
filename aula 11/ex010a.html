@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Qual a sua nacionalidade?</h1>
+    <label for="txtnac">País: </label>
+    <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Enviar" onclick="origem()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function origem() {
+            var pais = window.document.getElementById('txtnac').value
+            var res = window.document.getElementById('res')
+
+            res.innerHTML = `Você é natural de <strong>${pais}</strong>.`
+
+            if (pais == 'Brasil') {
+                res.innerHTML += `Você é <strong>brasileiro</strong>.`
+            } else {
+                res.innerHTML += `Você é estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>
